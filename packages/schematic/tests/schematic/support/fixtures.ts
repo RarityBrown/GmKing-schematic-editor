@@ -6,6 +6,7 @@ import type { ComponentInstance, ComponentType, Point, SchematicDocument, Schema
 const TEMPLATE_REF_PREFIXES: Record<ComponentType, string> = {
   gnd: "GND",
   vdd: "VDD",
+  antenna: "ANT",
   resistor: "R",
   capacitor: "C",
   inductor: "L",

@@ -61,6 +61,7 @@ function analysisModel(type: ComponentType, variantId?: string) {
 const EXPECTED_ANALYSIS_MODELS: Readonly<Record<ComponentType, AnalysisModel>> = {
   gnd: "ground",
   vdd: "annotation",
+  antenna: "blackBox",
   resistor: "resistor",
   capacitor: "capacitor",
   inductor: "inductor",
@@ -206,6 +207,7 @@ describe("schematic catalog contracts", () => {
     });
     expect(noScalarTypes).toEqual([
       "gnd",
+      "antenna",
       "diode",
       "iprobe",
       "diffProbe",

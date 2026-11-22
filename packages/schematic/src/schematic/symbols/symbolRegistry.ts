@@ -46,6 +46,7 @@ import {
   variableResistorSymbol
 } from "./passiveSymbols";
 import { groundHorizontalSymbol, groundSymbol, vddHorizontalSymbol, vddSymbol } from "./groundSymbols";
+import { antennaBodySymbol, antennaLeadSymbol } from "./antennaSymbols";
 import {
   analogBufferSymbol,
   analogBufferTriangleSymbol,
@@ -177,6 +178,11 @@ const SYMBOL_DEFINITIONS: Record<string, SymbolDefinition> = {
   vdd: {
     body: vddSymbol,
     accent: vddHorizontalSymbol,
+    accentStrokeWidth: (lineWidth) => 2 * lineWidth
+  },
+  antenna: {
+    body: antennaLeadSymbol,
+    accent: antennaBodySymbol,
     accentStrokeWidth: (lineWidth) => 2 * lineWidth
   },
   voltageSource: { body: voltageSourceSymbol },

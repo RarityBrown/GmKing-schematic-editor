@@ -105,6 +105,7 @@ const DIODE_PINS: PinDef[] = [
 
 const GROUND_PINS: PinDef[] = [{ id: "g", label: "0", role: "gnd", x: 0, y: -20 }];
 const VDD_PINS: PinDef[] = [{ id: "vdd", label: "VDD", role: "p", x: 0, y: 20 }];
+const ANTENNA_PINS: PinDef[] = [{ id: "port", label: "ANT", role: "io", x: 0, y: SYMBOL_GRID_SIZE }];
 
 const THREE_TERMINAL_AMP_PINS: PinDef[] = [
   { id: "inp", label: "+", role: "ctrlP", x: -60, y: -20 },
@@ -601,6 +602,11 @@ export const COMPONENT_CATALOG: Record<ComponentType, ComponentDef> = {
     ...VOLTAGE_VALUE,
     defaultLabelVisible: false
   },
+  antenna: {
+    ...oneTerminal("antenna", "ANT", "antenna", "antenna", ANTENNA_PINS),
+    size: { width: 2 * SYMBOL_GRID_SIZE, height: 2 * SYMBOL_GRID_SIZE },
+    defaultLabelVisible: false
+  },
   resistor: variableTwoTerminal("resistor", "R", "resistor", "R", "resistor", RESISTANCE_VALUE),
   capacitor: variableTwoTerminal("capacitor", "C", "capacitor", "C", "capacitor", CAPACITANCE_VALUE),
   inductor: {
@@ -955,6 +961,7 @@ export const COMPONENT_CATALOG: Record<ComponentType, ComponentDef> = {
 export const PALETTE_ORDER: ComponentType[] = [
   "gnd",
   "vdd",
+  "antenna",
   "resistor",
   "capacitor",
   "inductor",
