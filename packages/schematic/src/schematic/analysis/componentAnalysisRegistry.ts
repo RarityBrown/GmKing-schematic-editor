@@ -30,6 +30,7 @@ interface ComponentAnalysisRegistration {
 export const COMPONENT_ANALYSIS_REGISTRY = {
   gnd: { model: "ground" },
   vdd: { model: "annotation" },
+  antenna: { model: "blackBox" },
   resistor: { model: "resistor" },
   capacitor: { model: "capacitor" },
   inductor: { model: "inductor" },

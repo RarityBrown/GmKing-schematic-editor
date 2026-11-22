@@ -8,6 +8,7 @@ export const SYMBOL_GRID_SIZE = 20;
 export type ComponentType =
   | "gnd"
   | "vdd"
+  | "antenna"
   | "resistor"
   | "capacitor"
   | "inductor"

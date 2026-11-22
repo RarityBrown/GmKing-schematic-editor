@@ -5,6 +5,7 @@ import { InstanceSelector, type InstancePaletteItem } from "../../../src/schemat
 describe("instance aliases in keyboard placement", () => {
   it.each([
     ["diode", "", "diode", "diode"],
+    ["antenn", "a", "antenna", "antenna"],
     ["pass_g", "ate", "transmissionGate", "transmission_gate"],
     ["pass_gate", "", "transmissionGate", "transmission_gate"],
     ["NCH", "", "nmos", "nmos"],
